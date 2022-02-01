@@ -1,0 +1,42 @@
+
+{
+    "students": [
+      {
+        "fName" : "Rashid",
+        "lName" : "P",
+        "mobile": 9446447841,
+        "email" : "rasvpz@gmail.com",
+        "gender" : "Male",
+        "modeOfPayment" : "online",
+        "password" : "123456",
+        "checkbox" : "I agree terms and condition"
+      },
+
+      {
+        "fName" : "Abdul",
+        "lName" : "K",
+        "mobile": 8086917841,
+        "email" : "abdul@gmail.com",
+        "gender" : "Male",
+        "modeOfPayment" : "COD",
+        "password" : "wertyu",
+        "checkbox" : "I agree terms and condition"
+      },
+      {
+        "fName" : "Anil",
+        "lName" : "K",
+        "mobile": 8086917841,
+        "email" : "abdul@gmail.com",
+        "gender" : "Male",
+        "modeOfPayment" : "COD",
+        "password" : "wertyu",
+        "checkbox" : "I agree terms and condition"
+      }
+
+    ]
+  }
+
+
+
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<h2>Fetching Data from JSON and iterate into a TABLE</h2>
+
+<table width="100%" border="1">
+	<thead>
+		<tr>
+			<th width="10%"></th>
+			<th width="2%"></th>
+			<th width="10%"></th>
+			<th width="20%"></th>
+			<th width="10%"></th>
+			<th width="10%"></th>	
+			<th width="10%"></th>
+			<td width="18%" align="right"><input placeholder="SEARCH" type="text" oninput="myFunction()"></td>
+		</tr>
+		</thead>
+
+		<thead>
+		<tr>
+			<th width="10%" bgcolor="silver">FirstName</th>
+			<th width="2%"  bgcolor="silver">LastName</th>
+			<th width="10%" bgcolor="silver">Mobile</th>
+			<th width="20%" bgcolor="silver">Email</th>
+			<th width="10%" bgcolor="silver">Gender</th>
+			<th width="10%" bgcolor="silver">modeOfPayment</th>	
+			<th width="10%" bgcolor="silver">Password</th>
+			<th width="18%" bgcolor="silver">Terms</th>
+		</tr>
+		</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+</body>
+
+<script>
+
+let userPromise =  fetch('./studentReg.json')
+// console.log(userPromise)
+userPromise.then((response) => {
+	return response.json()
+}).then((resData) => {
+
+		var temp = ""
+		for (let x of resData.students) 
+		{
+		const {fName, lName, mobile, email, gender, modeOfPayment, password, checkbox} = x
+
+		temp += `<tr><td>${fName}</td> <td>${lName}</td> <td>${mobile}</td> <td>${email}</td> <td>${gender}</td> <td>${modeOfPayment}</td> <td>${password}</td> <td>${checkbox}</td></tr>`
+		document.querySelector('tbody').innerHTML = temp			
+
+		}
+		
+
+})
+.catch((error) => {
+	
+})
+
+
+
+function myFunction() {
+  var x = document.getElementById("myInput").value;
+  document.getElementById("demo").innerHTML = "You wrote: " + x;
+}
+
+
+
+</script>
+</html>
